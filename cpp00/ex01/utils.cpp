@@ -6,7 +6,7 @@ void display(std::string error)
 	std::cout << MAGENTA "       🦑 SquidBook 🦑" RESET << std::endl
 			  << std::endl;
 	std::cout << you_can_only() << std::endl;
-	std::cout << error << "➜ ";
+	std::cout << error << "➜  ";
 }
 
 bool is_empty(const std::string &s)

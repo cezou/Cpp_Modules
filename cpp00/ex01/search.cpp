@@ -49,7 +49,7 @@ static void display_array(PhoneBook pb, std::string error)
 	}
 	std::cout << "🦑━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━🦑" << std::endl << std::endl;
 	std::cout << "Enter the" BOLD " index " RESET "of the contact you want to display" << std::endl;
-	std::cout << error << "➜ ";
+	std::cout << error << "➜  ";
 }
 
 int search(PhoneBook pb)

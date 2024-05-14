@@ -4,15 +4,16 @@ void Contact::set(size_t field, std::string val)
 {
 	if (field == first_name)
 		this->_first_name = val;
-	if (field == last_name)
+	else if (field == last_name)
 		this->_last_name = val;
-	if (field == nick_name)
+	else if (field == nick_name)
 		this->_nick_name = val;
-	if (field == number)
+	else if (field == number)
 		this->_number = val;
-	if (field == secret)
+	else if (field == secret)
 		this->_secret = val;
 }
+
 std::string Contact::get(size_t field)
 {
 	if (field == first_name)
@@ -27,9 +28,11 @@ std::string Contact::get(size_t field)
 		return (this->_secret);
 	return ("False field");
 }
+
 Contact::Contact()
 {
 }
+
 Contact::~Contact()
 {
 }

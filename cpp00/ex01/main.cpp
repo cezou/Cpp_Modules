@@ -26,5 +26,5 @@ int main(void)
 			break;
 		error = "";
 	}
-	std::cout << std::endl;
+	std::cout << CLEAR;
 }
