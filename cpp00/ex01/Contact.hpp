@@ -1,20 +1,19 @@
 #ifndef CONTACT_HPP
-# define CONTACT_HPP
-# include <iomanip>
-# include <iostream>
-# include <sstream>
-# include <algorithm>
-# include <cctype>
+#define CONTACT_HPP
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <cctype>
 
 class Contact
 {
-  public:
+public:
 	void set(size_t field, std::string val);
 	std::string get(size_t field);
 	Contact();
 	~Contact();
 
-  private:
+private:
 	std::string _first_name;
 	std::string _last_name;
 	std::string _nick_name;
@@ -29,6 +28,6 @@ typedef enum field
 	nick_name,
 	number,
 	secret
-}	field;
+} field;
 
 #endif
