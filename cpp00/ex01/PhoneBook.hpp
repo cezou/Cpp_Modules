@@ -13,8 +13,8 @@ public:
 	int increment_index();
 
 private:
-	Contact	_contacts[8];
-	int		_index;
+	Contact _contacts[8];
+	int _index;
 };
 
 #define BOLD "\033[1m"

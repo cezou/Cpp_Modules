@@ -1,13 +1,15 @@
-NAME = recovered
+NAME = myFirstClassInOrthodoxCanonicalForm
 
 OBJ_PATH = objs
+SRC_PATH = srcs
 
-SRC = Account.cpp tests.cpp
+SRC = main.cpp Fixed.cpp
+# SRC := $(addprefix $(SRC_PATH)/,$(SRC))
 
 OBJ = $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(SRC))
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -g
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
@@ -15,7 +17,7 @@ $(OBJ_PATH)/%.o: %.cpp
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME) : ${OBJ} Makefile Account.cpp tests.cpp
+$(NAME) : ${OBJ} Makefile
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) 
 
 clean:
@@ -26,4 +28,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
