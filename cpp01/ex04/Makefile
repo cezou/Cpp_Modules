@@ -1,4 +1,4 @@
-NAME = SedForLoosers
+NAME = sedForLoosers
 
 OBJ_PATH = objs
 SRC_PATH = srcs

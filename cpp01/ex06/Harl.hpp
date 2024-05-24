@@ -5,7 +5,6 @@
 #include <iomanip>
 #include <sstream>
 #include <cctype>
-#include <map>
 
 class Harl
 {

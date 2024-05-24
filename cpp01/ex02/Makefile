@@ -1,4 +1,4 @@
-NAME = HITHISISBRAIN
+NAME = hithisisbrain
 
 OBJ_PATH = objs
 

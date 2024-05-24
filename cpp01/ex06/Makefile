@@ -1,8 +1,10 @@
-NAME = unnecessaryViolence
+NAME = harlFilter
 
 OBJ_PATH = objs
+SRC_PATH = srcs
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp Harl.cpp
+# SRC := $(addprefix $(SRC_PATH)/,$(SRC))
 
 OBJ = $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(SRC))
 
