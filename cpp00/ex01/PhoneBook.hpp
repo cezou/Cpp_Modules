@@ -7,9 +7,9 @@ class PhoneBook
 public:
 	PhoneBook();
 	~PhoneBook();
-	Contact get_contact(int i);
+	Contact get_contact(int i) const;
 	void set_contact(Contact contact, int i);
-	int get_index();
+	int get_index() const;
 	int increment_index();
 
 private:

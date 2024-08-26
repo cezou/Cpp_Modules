@@ -10,7 +10,7 @@ void replace(std::ifstream &file, std::string filename, std::string s1, std::str
 	if (!newfile)
 		return ((void)(std::cerr << "Unable to create file " << filename + ".replace" << std::endl));
 	std::string line;
-	while (std::getline(file, line))
+	while (getline(file, line))
 	{
 		line += '\n';
 		size_t pos;

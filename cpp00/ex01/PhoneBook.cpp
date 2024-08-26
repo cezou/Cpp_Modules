@@ -8,7 +8,7 @@ PhoneBook::~PhoneBook()
 {
 }
 
-Contact PhoneBook::get_contact(int i)
+Contact PhoneBook::get_contact(int i) const
 {
 	return (this->_contacts[i]);
 }
@@ -18,7 +18,7 @@ void PhoneBook::set_contact(Contact contact, int i)
 	this->_contacts[i] = contact;
 }
 
-int PhoneBook::get_index()
+int PhoneBook::get_index() const
 {
 	return (this->_index);
 }
