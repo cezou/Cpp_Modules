@@ -19,7 +19,7 @@ void Fixed::setRawBits(int const raw)
 Fixed::Fixed(const Fixed &fixed)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->setRawBits(fixed._integer);
+	*this = fixed;
 }
 
 Fixed &Fixed::operator=(const Fixed &copy)
