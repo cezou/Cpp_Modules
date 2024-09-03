@@ -21,15 +21,29 @@ public:
 	void setRawBits(int const raw);
 	float toFloat(void) const;
 	int toInt(void) const;
-	static int &min(int &a, int &b);
-	static const int &min(const int &a, const int &b);
-	static int &max(int &a, int &b);
-	static const int &max(const int &a, const int &b);
+
+	static Fixed &min(Fixed &a, Fixed &b);
+	static const Fixed &min(const Fixed &a, const Fixed &b);
+	static Fixed &max(Fixed &a, Fixed &b);
+	static const Fixed &max(const Fixed &a, const Fixed &b);
 
 	Fixed &operator=(const Fixed &copy);
-	Fixed &operator*(const Fixed &other);
+	Fixed operator*(const Fixed &other);
+	Fixed operator-(const Fixed &other);
+	Fixed operator+(const Fixed &other);
+	Fixed operator/(const Fixed &other);
 
-	bool operator>(const Fixed &other);
+	Fixed &operator++();
+	Fixed operator++(int);
+	Fixed &operator--();
+	Fixed operator--(int);
+
+	bool operator>(const Fixed &other) const;
+	bool operator>=(const Fixed &other) const;
+	bool operator<(const Fixed &other) const;
+	bool operator<=(const Fixed &other) const;
+	bool operator!=(const Fixed &other) const;
+	bool operator==(const Fixed &other) const;
 
 private:
 	int _integer;
@@ -37,5 +51,7 @@ private:
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
+
+bool is_float(const Fixed &fixed);
 
 #endif
