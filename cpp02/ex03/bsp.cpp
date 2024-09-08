@@ -10,7 +10,7 @@ float area(Point const a, Point const b, Point const c)
 	float x3 = c.getX().toFloat();
 	float y3 = c.getY().toFloat();
 
-	return roundf(std::abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2);
+	return (std::abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2);
 }
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
