@@ -18,13 +18,14 @@ public:
 	Point &operator=(const Point &copy);
 
 	Fixed getX() const;
-	Fixed getY();
-	void setX(Fixed &x);
-	void setY(Fixed y);
+	Fixed getY() const;
 
 private:
 	const Fixed _x;
 	const Fixed _y;
 };
+
+void print_graph(Point const a, Point const b, Point const c, Point const point);
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

@@ -1,20 +1,15 @@
-#include "Fixed.hpp"
+#include "Point.hpp"
 #include <iostream>
 
 int main(void)
 {
-	Fixed a;
-	Fixed const b(Fixed(5.05f) * Fixed(2));
+	Point a(0, 0);
+	Point b(0, 9);
+	Point c(9, 4.5f);
+	Point p(1, 8);
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-
-	std::cout << b << std::endl;
-
-	std::cout << Fixed::max(a, b) << std::endl;
-
+	print_graph(a, b, c, p);
+	bsp(a, b, c, p) ? std::cout << "Point is Inside!\n"
+					: std::cout << "Point is Outside!\n";
 	return 0;
 }

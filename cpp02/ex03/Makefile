@@ -1,15 +1,15 @@
-NAME = myFirstClassInOrthodoxCanonicalForm
+NAME = cpp02
 
 OBJ_PATH = objs
 SRC_PATH = srcs
 
-SRC = main.cpp Fixed.cpp Point.cpp
+SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
 # SRC := $(addprefix $(SRC_PATH)/,$(SRC))
 
 OBJ = $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(SRC))
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
 all: $(NAME)
 

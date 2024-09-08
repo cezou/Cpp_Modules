@@ -1,4 +1,4 @@
-NAME = myFirstClassInOrthodoxCanonicalForm
+NAME = cpp02
 
 OBJ_PATH = objs
 SRC_PATH = srcs
