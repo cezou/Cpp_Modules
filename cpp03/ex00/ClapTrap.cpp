@@ -24,7 +24,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		return;
 	if (amount > this->_HPs)
 	{
-		std::cout << "ClapTrap " << this->_name << " lost " << amount - this->_HPs << "points of damage !" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " lost " << this->_HPs << "points of damage !" << std::endl;
 		this->_HPs = 0;
 		return;
 	}
