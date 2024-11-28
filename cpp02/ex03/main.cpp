@@ -6,7 +6,7 @@ int main(void)
 	Point a(0, 0);
 	Point b(0, 9);
 	Point c(9, 4.5f);
-	Point p(4, 1);
+	Point p(0, 0);
 
 	print_graph(a, b, c, p);
 	bsp(a, b, c, p) ? std::cout << "Point is Inside!\n"
