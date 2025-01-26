@@ -27,7 +27,7 @@ public:
 	void beRepaired(unsigned int amount);
 	void displayStats(void) const;
 
-private:
+protected:
 	std::string _name;
 	unsigned int _HPs;
 	unsigned int _EPs;

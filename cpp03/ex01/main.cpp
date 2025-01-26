@@ -1,9 +1,10 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
 	ClapTrap a("Pierre Chabrier");
-	ClapTrap b("Sylvain Lyve");
+	ScavTrap b("Sylvain Lyve");
 
 	a.displayStats();
 	b.displayStats();
@@ -34,6 +35,8 @@ int main()
 
 	a.attack("Sylvain Lyve");
 	a.beRepaired(1);
+
+	b.guardGate();
 
 	return 0;
 }

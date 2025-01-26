@@ -1,9 +1,10 @@
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
 	ClapTrap a("Pierre Chabrier");
-	ClapTrap b("Sylvain Lyve");
+	FragTrap b("Sylvain Lyve");
 
 	a.displayStats();
 	b.displayStats();
@@ -34,6 +35,8 @@ int main()
 
 	a.attack("Sylvain Lyve");
 	a.beRepaired(1);
+
+	b.highFivesGuys();
 
 	return 0;
 }

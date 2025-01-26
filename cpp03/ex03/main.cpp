@@ -1,12 +1,17 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
 	ClapTrap a("Pierre Chabrier");
-	ClapTrap b("Sylvain Lyve");
+	ScavTrap b("Sylvain Lyve");
+	DiamondTrap c("Diamond");
 
 	a.displayStats();
 	b.displayStats();
+	c.displayStats();
 
 	a.attack("Sylvain Lyve");
 	b.takeDamage(1);
@@ -34,6 +39,9 @@ int main()
 
 	a.attack("Sylvain Lyve");
 	a.beRepaired(1);
+
+	b.guardGate();
+	c.whoAmI();
 
 	return 0;
 }
