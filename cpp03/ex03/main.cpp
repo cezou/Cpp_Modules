@@ -5,43 +5,28 @@
 
 int main()
 {
-	ClapTrap a("Pierre Chabrier");
-	ScavTrap b("Sylvain Lyve");
-	DiamondTrap c("Diamond");
+	ClapTrap c("Pierre Chabrier");
+	ScavTrap s("Sylvain Lyve");
+	FragTrap f("Frag");
+	DiamondTrap d("Diamond");
 
-	a.displayStats();
-	b.displayStats();
+	d.displayStats();
+	d.whoAmI();
 	c.displayStats();
+	s.displayStats();
+	f.displayStats();
+	c.attack("Sylvain Lyve");
+	s.attack("Pierre Chabrier");
+	f.attack("Pierre Chabrier");
+	d.attack("Sylvain Lyve");
 
-	a.attack("Sylvain Lyve");
-	b.takeDamage(1);
-	b.displayStats();
-
-	b.beRepaired(1);
-	b.displayStats();
-
-	b.takeDamage(10);
-	b.displayStats();
-
-	b.beRepaired(1);
-	b.displayStats();
-
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.attack("Sylvain Lyve");
-	a.displayStats();
-
-	a.attack("Sylvain Lyve");
-	a.beRepaired(1);
-
-	b.guardGate();
-	c.whoAmI();
+	c.takeDamage(5);
+	s.takeDamage(5);
+	f.takeDamage(5);
+	d.takeDamage(5);
+	d.highFivesGuys();
+	d.guardGate();
+	d.whoAmI();
 
 	return 0;
 }

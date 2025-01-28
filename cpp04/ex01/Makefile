@@ -1,15 +1,17 @@
-NAME = cpp03
+NAME = cpp04
 
 OBJ_PATH = objs
 SRC_PATH = srcs
 
-SRC = ClapTrap.cpp DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp main.cpp
+SRC = Animal.cpp main.cpp Dog.cpp Cat.cpp 
 # SRC := $(addprefix $(SRC_PATH)/,$(SRC))
 
 OBJ = $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(SRC))
 
+HEADERS = Animal.hpp Dog.hpp Cat.hpp 
+
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -g -std=c++98
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -g -I.
 
 all: $(NAME)
 
@@ -17,8 +19,8 @@ $(OBJ_PATH)/%.o: %.cpp
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME) : ${OBJ} Makefile
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) 
+$(NAME) : ${OBJ} ${HEADERS} Makefile
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ_PATH)

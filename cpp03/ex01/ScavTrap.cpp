@@ -3,10 +3,25 @@
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
-	std::cout << WHITE << name << RESET << " ScavTrap spawned!" << std::endl;
+	std::cout << WHITE << this->_name << RESET << " ScavTrap spawned!" << std::endl;
 	this->_HPs = 100;
 	this->_EPs = 50;
 	this->_AD = 20;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{
+	std::cout << WHITE << other._name << RESET << " ScavTrap copied!" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	if (this != &other)
+	{
+		ClapTrap::operator=(other);
+		std::cout << WHITE << other._name << RESET << " ScavTrap assigned!" << std::endl;
+	}
+	return *this;
 }
 
 ScavTrap::~ScavTrap()

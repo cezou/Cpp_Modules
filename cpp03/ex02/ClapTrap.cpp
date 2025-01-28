@@ -6,6 +6,24 @@ ClapTrap::ClapTrap(const std::string name) : _name(name), _HPs(10), _EPs(10), _A
 	std::cout << WHITE << name << RESET << " spawned!" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &other) : _name(other._name), _HPs(other._HPs), _EPs(other._EPs), _AD(other._AD)
+{
+	std::cout << WHITE << other._name << RESET << " copied!" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	if (this != &other)
+	{
+		this->_name = other._name;
+		this->_HPs = other._HPs;
+		this->_EPs = other._EPs;
+		this->_AD = other._AD;
+		std::cout << WHITE << other._name << RESET << " assigned!" << std::endl;
+	}
+	return *this;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << WHITE << this->_name << RESET << " died!" << std::endl;
