@@ -3,12 +3,12 @@ NAME = cpp04
 OBJ_PATH = objs
 SRC_PATH = srcs
 
-SRC = Animal.cpp main.cpp Dog.cpp Cat.cpp Brain.cpp
+SRC = AMateria.cpp main.cpp
 # SRC := $(addprefix $(SRC_PATH)/,$(SRC))
 
 OBJ = $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(SRC))
 
-HEADERS = Animal.hpp Dog.hpp Cat.hpp 
+HEADERS = AMateria.hpp
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -g -I.

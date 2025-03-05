@@ -33,6 +33,7 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
+	// Animal::makeSound();
 	std::cout << "MIAOUUUUUU" << std::endl;
 }
 

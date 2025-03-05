@@ -1,8 +1,6 @@
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 #include <iomanip>
 #include <sstream>
@@ -19,21 +17,18 @@
 #define GRAY "\x1B[1;90m"
 #define BOLD_WHITE "\x1B[1;97m"
 
-class Cat : public Animal
+class Animal
 {
 public:
-	Cat();
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &other);
-	~Cat();
-	void makeSound() const;
+	Animal();
+	Animal(const Animal &other);
+	Animal &operator=(const Animal &other);
+	virtual ~Animal();
+	virtual void makeSound() const = 0; // virtuelle pure
+	std::string getType() const;
 
-	// Add these methods to access brain ideas
-	void setIdea(int index, const std::string &idea);
-	std::string getIdea(int index) const;
-
-private:
-	Brain *_brain;
+protected:
+	std::string _type;
 };
 
 #endif
